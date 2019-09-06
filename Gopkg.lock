@@ -13,6 +13,18 @@
   revision = "d6e3b3328b783f23731bc4d058875b0371ff8109"
 
 [[projects]]
+  branch = "master"
+  digest = "1:4d8d3d67c774d50d3bcb0c5afa617fd39c7ad025add56df86544f94f4b409cac"
+  name = "github.com/HDIOES/agg-blog"
+  packages = [
+    "models",
+    "rest",
+    "rest/util",
+  ]
+  pruneopts = "UT"
+  revision = "93a6103029fe70e141df2e7e395aa0934551a955"
+
+[[projects]]
   digest = "1:d5e752c67b445baa5b6cb6f8aa706775c2aa8e41aca95a0c651520ff2c80361a"
   name = "github.com/Microsoft/go-winio"
   packages = [
@@ -46,6 +58,14 @@
   packages = ["pathdriver"]
   pruneopts = "UT"
   revision = "75bee3e2ccb6402e3a986ab8bd3b17003fc0fdec"
+
+[[projects]]
+  digest = "1:ffe9824d294da03b391f44e1ae8281281b4afc1bdaa9588c9097785e3af10cec"
+  name = "github.com/davecgh/go-spew"
+  packages = ["spew"]
+  pruneopts = "UT"
+  revision = "8991bc29aa16c548c550c7ff78260e27b9ab7c73"
+  version = "v1.1.1"
 
 [[projects]]
   digest = "1:87dcb59127512b84097086504c16595cf8fef35b9e0bfca565dfc06e198158d7"
@@ -161,6 +181,14 @@
   version = "v0.8.1"
 
 [[projects]]
+  digest = "1:0028cb19b2e4c3112225cd871870f2d9cf49b9b4276531f03438a88e94be86fe"
+  name = "github.com/pmezard/go-difflib"
+  packages = ["difflib"]
+  pruneopts = "UT"
+  revision = "792786c7400a136282c1664665ae0a8db921c6c2"
+  version = "v1.0.0"
+
+[[projects]]
   branch = "master"
   digest = "1:ea0e81b259e0c0563617017b1ba76d4af3ec97817defff75517eb7f34664b917"
   name = "github.com/rubenv/sql-migrate"
@@ -178,6 +206,14 @@
   pruneopts = "UT"
   revision = "839c75faf7f98a33d445d181f3018b5c3409a45e"
   version = "v1.4.2"
+
+[[projects]]
+  digest = "1:8548c309c65a85933a625be5e7d52b6ac927ca30c56869fae58123b8a77a75e1"
+  name = "github.com/stretchr/testify"
+  packages = ["assert"]
+  pruneopts = "UT"
+  revision = "221dbe5ed46703ee255b1da0dec05086f5035f62"
+  version = "v1.4.0"
 
 [[projects]]
   digest = "1:dc48dff981a895912c33cf272b1d869c216d058bd4025736cb481d3ceeed6872"
@@ -226,15 +262,26 @@
   revision = "6a667da9c028871f98598d85413e3fc4c6daa52e"
   version = "v1.7.2"
 
+[[projects]]
+  digest = "1:4d2e5a73dc1500038e504a8d78b986630e3626dc027bc030ba5c75da257cdb96"
+  name = "gopkg.in/yaml.v2"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "51d6538a90f86fe93ac480b35f37b2be17fef232"
+  version = "v2.2.2"
+
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
   input-imports = [
+    "github.com/HDIOES/agg-blog/models",
+    "github.com/HDIOES/agg-blog/rest",
     "github.com/gorilla/mux",
     "github.com/lib/pq",
     "github.com/ory/dockertest",
     "github.com/pkg/errors",
     "github.com/rubenv/sql-migrate",
+    "github.com/stretchr/testify/assert",
     "github.com/tkanos/gonfig",
     "go.uber.org/dig",
   ]
