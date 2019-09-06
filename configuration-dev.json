@@ -1,0 +1,7 @@
+{
+    "databaseUrl": "postgres://blog_user:12345@blog_postgresdb:5432/blog?sslmode=disable",
+    "maxOpenConnections": 20,
+    "maxIdleConnections": 5,
+    "connectionTimeout": 60,
+    "port": 10046
+}

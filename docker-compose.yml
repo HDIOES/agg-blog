@@ -1,0 +1,27 @@
+version: '3.6'
+
+volumes:
+  blog_data:
+    driver: local
+
+services:
+  blog_postgresdb:
+    image: postgres
+    environment:
+      POSTGRES_USER: blog_user
+      POSTGRES_PASSWORD: 12345
+      POSTGRES_DB: blog
+    volumes:
+      - blog_data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+  app:
+    build: .
+    environment:
+      CONFIG_PATH: configuration-dev.json
+    ports:
+      - 10046:10046
+    depends_on:
+      - blog_postgresdb
+    links:
+      - blog_postgresdb
